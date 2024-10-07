@@ -1,0 +1,41 @@
+-----------------LATEST VERSION--------------------------------
+Day 01
+Understanding of Embedded Database, Configuring H2 Database, Demo H2 Console UI, What are Entity Classes?, 
+Creating Library Entity Class,SpringBoot + 
+JPA + H2	SpringBoot + JPA + dH2
+
+Day 02
+SpringBoot + JPA + H2	SpringBoot + JPA + H2
+
+Day 03
+
+"@RestController Annotation, How to create RESTful POST API, 
+Spring Restful - Basic Demo, How to use @Data Annotation, Introduction to Swagger API, Customising the API Info,"	
+PostMan Installation & implementation 
+Introduction to JPA, Spring Boot Repository using JPA Restful CRUD
+Day 04
+"
+Spring Boot Repository using JPA Restful CRUD"	"
+Spring Boot Repository using JPA Restful CRUD"
+
+------------------OLD VERSION-----------------------------
+
+Week 16
+Day 01
+SpringBoot + JPA + MYSQL CRUD	Configuring H2 Database, 
+Demo H2 Console UI, What are Entity Classes?, 
+Creating Library Entity Class,SpringBoot + JPA + H2
+
+Day 02
+SpringBoot + JPA + H2	SpringBoot + JPA + H2
+
+Day 03
+"@RestController Annotation, How to create RESTful POST API, 
+Spring Restful - Basic Demo, How to use @Data Annotation, Introduction to Swagger API, Customising the API Info,"	
+Introduction to JPA, Spring Boot Repository using JPA Restful CRUD and Thymeleaf
+
+Day 04
+
+"
+Spring Boot Repository using JPA Restful CRUD and Thymeleaf"	"
+Spring Boot Repository using JPA Restful CRUD and Thymeleaf"

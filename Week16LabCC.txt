@@ -1,0 +1,96 @@
+Week 16
+
+Day 01
+SPRINGBOOT
+H2 Console /JPA+H2/
+
+H2 +JPA Crud ....
+Library DB/Table ....
+H2+JPA+Thymeleaf ....
+
+As part of the IT Dev Team developing the School Mgmt System, requirement has risen to implement a module for 
+Library Mgmt and you are asked to create a facility for the management of Library details, as part of this,the  initial
+module is supposed to allow the CRUD operations for the LIbrary information
+Library Entity is supposed to have the following details:
+
+Library
+	 	id;
+		name;
+	 	commaSeperatedBooknames;
+		subject
+		publisher
+
+Since the Administration wants to manage this using embedded DB, you are asked to Create a SpringBoot Application with 
+JPA and the Database to be used is H2 with Thymeleaf as Template Engine.
+------------------------------------------------------
+On Day 01
+Create the Project STructure with all MVC Layers aling with Repository Layer plus UI to perform read Operations
+Dependencies to be added:
+Web, JPA, H2, Thymeleaf,Lombok, Actuator(Optional) & DevTools
+
+------------------------------------------------------
+Day 02
+Continuing the Project that was created on Day 01 add functionalities to do the following operations
+	Update
+	Create
+	Delete
+Along with the following filtering operations using JPA:
+a) Library With No Books
+b) Library viewed by Sorting, based on the field/column selected in a Drop Down
+(Option is given through radio buttons to choose the sorting order as Ascending or Descending)
+c) Option to choose top X records from 0th record
+d) Option to choose Page Number and No of records per page
+
+All the above options are to be choosen by providing Radio Buttons in the List Page 
+
+
+SELECT * FROM LIBRARY 
+
+delete from Library where ID = 0;
+
+
+insert into library
+values(1,'Book1,Book2,Book3','Library1','Publisher1','Psychology');
+CRUD WORKING
+-------------------------------------------------------------------
+Day 03-
+1)
+Create a Simple RESTFul App using SpringBoot to print "Hello , Welcome to the RESTFul Services"
+Implement @RestController
+Configure Swagger and invoke swagger-ui.html page to view the Documentation page
+
+Invoke The RESTFul API using PostMan
+Also as part of Migration plan from Web Application to WebServices, 
+Library Mgmt System - may be requiring an upgrade, therefore a SpringBoot based RestFul Service is to be created
+But The DB connectivity is simulated through the Collections and actual DB connectivity is to be done later.
+ 
+Library Entity with the following fields
+long id;
+String name;
+commaSeperatedBooknames;
+String subject;
+String publisher;
+
+Create DAO,Model,Service & Controller Layers 
+List of Library Objects is created and facilitate
+GetAllLibrary, GetLibraryById,DeleteLibraryById,InsertLibrary & UpdateLibrary Operations
+
+Use POSTMan to test the Application
+
+
+
+Day 04
+------------------------------------------------
+CCRepDetails CRUD Operation through Restful Service
+
+2) 
+As Part of the UI-Development Team you are asked to  migrate the part of the Customer Care Mgmt System into
+
+a RESTFul Service with CRUD operations
+Using JPA & MySQL as RDBMS
+Implement Lombok, DevTools,Swagger
+Test The Application with POSTMan
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+ 

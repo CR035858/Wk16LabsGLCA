@@ -1,0 +1,11 @@
+insert into library values(1,'Book11,Book22','Library1','Publisher1','Biological Sciences');
+insert into library values(2,'Book22,Book33','Library2','Publisher2','Analytical Geometry');
+insert into library values(3,'Book33,Book44','Library3','Publisher3','Sociology');
+insert into library values(4,'Book44,Book55','Library4','Publisher4','Psychology');
+insert into library values(5,'Book55,Book66','Library5','Publisher7','Chemistry');
+insert into library values(6,'Book66,Book77','Library6','Publisher6','Physics');
+insert into library values(7,'Book77,Book88','Library7','Publisher5','Trigonometry');
+
+
+insert into library values(8,'','Library8','Publisher8','Physics');
+insert into library values(9,'','Library9','Publisher9','Trigonometry');
