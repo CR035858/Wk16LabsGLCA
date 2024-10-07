@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Library Directory</title>
+	<style>
+		body 
+		{
+	        background: #CBDCF7;
+	        margin: 0;
+      	}
+	</style>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Library Directory</h3>
+	<hr>
+	
+	<!-- Add a button -->
+	<a th:href="@{/libraries/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Library
+	</a>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Library Name</th>
+				<th>Books</th>
+				<th>Subject</th>
+				<th>Publisher</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="library : ${libraries}">
+			
+				<td th:text="${library.name}" />	
+				<td th:text="${library.commaSeperatedBooknames}" />	
+				<td th:text="${library.subject}" />	
+				<td th:text="${library.publisher}" />	
+				
+				<td>
+				<div class="row">
+				
+					<div class="col-small">
+					<!-- Add "update" button/link -->
+					<form action="#" th:action="@{/libraries/showFormForUpdate}" method="POST">
+					
+						<input type="hidden" name="libraryId" th:value="${library.id}" />						
+						<button type="submit" class="btn btn-info btn-sm ml-3 mr-1">Update</button>
+
+					</form>
+					</div>
+					
+					<div class="col-small">
+					<!-- Add "delete" button/link -->					
+					<form action="#" th:action="@{/libraries/delete}" method="POST">
+					
+						<input type="hidden" name="libraryId" th:value="${library.id}" />						
+						<button type="submit" class="btn btn-danger btn-sm"
+								onclick="if (!(confirm('Are you sure you want to delete this Library ?'))) return false">
+								Delete
+						</button>
+
+					</form>
+					</div>
+				</div>	
+				</td>
+				
+				
+			</tr>
+		</tbody>		
+	</table>
+	<hr/>
+	<div class="col-small">
+					<!-- Add "delete" button/link -->					
+					<form action="#" th:action="@{/libraries/showFilteredList}" method="POST">
+					
+						Libraries with No Books : <input type="radio" name="filters" th:value="nobooks" />	<br>
+						Sort 	:				<input type="radio" name="filters" th:value="sort" />	<br>
+						Top X Records :			<input type="radio" name="filters" th:value="topX" />	<br>
+						Pagination :			<input type="radio" name="filters" th:value="paging" />	<br>
+						If You Wish to Sort: </br> 	
+						Choose the Column on Which You wish to Sort :</br>
+						<select name="columns">
+	 						<option th:each="column:${columns}" th:value="${column}" th:text="${column}"/>
+	 					</select>	
+	 					Choose the Order You wish to Sort:
+	 					<select name="order">
+	 						<option th:each="order:${order}" th:value="${order}" th:text="${order}"/>
+	 					</select>			
+						
+						<hr>
+						<h5>Paging....1(from 0)</h5>
+						Enter From which Record You Wish to See
+						<input type="text" name="fromRecord" placeholder="FromRecord" value="1"/>
+						How Many Records You Wish to See..
+						<input type="text" name="noOfRecords" placeholder="noOfRecords" value="1"/>
+						
+						<h5>Records Per Page(from 0)</h5>
+						Enter Page No
+						<input type="text" name="pageNo" placeholder="PageNo" value="1"/>
+						Records Per Page..
+						<input type="text" name="recPerPage" placeholder="recPerPage" value="1"/>
+						<button type="submit" class="btn btn-info btn-sm ml-3 mr-1">FILTER</button>
+					</form>
+	</div>
+</div>
+	
+</body>
+</html>
